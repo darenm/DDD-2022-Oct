@@ -1,0 +1,7 @@
+{
+  "profiles": {
+	"DDD2022OctCat.Windows (Package)": {
+	  "commandName": "MsixPackage"
+	}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "solution": {
+    "path": "DDD2022OctCat.sln",
+    "projects": [
+      "DDD2022OctCat.Mobile\\DDD2022OctCat.Mobile.csproj",
+      "DDD2022OctCat.Skia.Gtk\\DDD2022OctCat.Skia.Gtk.csproj",
+      "DDD2022OctCat.UI\\DDD2022OctCat.UI.shproj",
+      "DDD2022OctCat.Wasm\\DDD2022OctCat.Wasm.csproj",
+      "DDD2022OctCat\\DDD2022OctCat.csproj"
+    ]
+  }
+}
