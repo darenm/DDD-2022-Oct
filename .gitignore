@@ -1,0 +1,105 @@
+# Sections taken from
+# https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+**/[Ll]og/*
+**/[Ll]ogs/*
+node_modules/*
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# TFS 2012 Local Workspace
+$tf/
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+# Note: Comment the next line if you want to checkin your web deploy settings,
+# but database connection strings (with potential passwords) will be unencrypted
+#*.pubxml
+*.publishproj
+
+# Microsoft Azure Web App publish settings. Comment the next line if you want to
+# checkin your Azure Web App publish settings, but sensitive information contained
+# in these scripts will be unencrypted
+PublishScripts/
+
+
+# NuGet Packages
+*.nupkg
+# NuGet Symbol Packages
+*.snupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+# except build/, which is used as an MSBuild target.
+!**/[Pp]ackages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/[Pp]ackages/repositories.config
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+
+
+#Kahua sections below
+*.log
+*.vspscc
+
+#VS Will automatically add entries at the bottom when you ignore them in the IDE
+/Source/launch/com.kahua.invitation/dist/
+/Source/launch/com.kahua.invitation/node_modules/
+/Source/launch/com.kahua.invitation/src
+/Source/launch/com.kahua.invitation/package-lock.json
+/Source/launch/com.kahua.launch/web
+
+#generated editorconfig files
+*GeneratedMSBuildEditorConfig.editorconfig
+#generated compiler logs for tracking static analysis rules
+*.sarif
+/Source/ContentTemp
+/Source/PublishedWebsites
+/Source/Tools/kahua.tools.Translator/kahua.Tools.WikiGenerator
+/Source/host/mobile/kahua.host.mobile/kahua.host.android/Resources/Resource.designer.cs
+/Source/host/mobile/kahua.host.mobile/kahua.host.android/*.json
+/Source/host/mobile/kahua.host.mobile/kahua.host.ios/*.json
+/Source/host/mobile/kahua.host.mobile/kahua.host.android/*.blob
+/Source/host/mobile/kahua.host.mobile/kahua.host.ios/*.blob
+/hooks
+/lfs
+/Source/host/uno/kahua.host.uno.Shared/theme/Generated.xaml
+/Source/host/wpf/common/pdf/KahuaPdfLib.exp
+/Source/host/wpf/common/pdf/KahuaPdfLib.lib
+/Source/host/wpf/common/pdf/KahuaPdfLib.pdb
+/Source/.cr/
