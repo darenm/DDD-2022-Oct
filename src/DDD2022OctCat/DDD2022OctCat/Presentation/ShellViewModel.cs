@@ -3,20 +3,30 @@ namespace DDD2022OctCat.Presentation;
 
 public class ShellViewModel
 {
-	private INavigator Navigator { get; }
+    private INavigator Navigator { get; }
 
+    private IRouteNotifier _routeNotifier;
 
-	public ShellViewModel(
-		INavigator navigator)
-	{
+    public ShellViewModel(
+                IRouteNotifier routeNotifier,
+        INavigator navigator)
+    {
 
-		Navigator = navigator;
+        Navigator = navigator;
 
-		_ = Start();
-	}
+        _routeNotifier = routeNotifier;
+        _routeNotifier.RouteChanged += _routeNotifier_RouteChanged;
 
-	public async Task Start()
-	{
-		await Navigator.NavigateViewModelAsync<MainViewModel>(this);
-	}
+        _ = Start();
+    }
+
+    private void _routeNotifier_RouteChanged(object? sender, RouteChangedEventArgs e)
+    {
+        var a = e.Region;
+    }
+
+    public async Task Start()
+    {
+        await Navigator.NavigateViewModelAsync<MainViewModel>(this);
+    }
 }

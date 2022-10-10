@@ -7,17 +7,36 @@ public partial class MainViewModel
 
 	public MainViewModel(
 		INavigator navigator,
+		IRouteNotifier routeNotifier,
 		IOptions<AppConfig> appInfo)
 	{ 
 	
 		_navigator = navigator;
-		Title = $"Main - {appInfo?.Value?.Title}";
-	}
+		_routeNotifier = routeNotifier;
+		_routeNotifier.RouteChanged += _routeNotifier_RouteChanged;
+        Title = $"Main - {appInfo?.Value?.Title}";
 
-	public async Task GoToSecond(CancellationToken cancellation)
+        _ = Start();
+
+    }
+
+	private void _routeNotifier_RouteChanged(object? sender, RouteChangedEventArgs e)
 	{
-		await _navigator.NavigateViewModelAsync<SecondViewModel>(this, cancellation: cancellation);
+		var a = e.Region;
 	}
 
-	private INavigator _navigator;
+	public async Task Start()
+    {
+		if (await _navigator.CanNavigate(new Route("Second")))
+		{
+            var response = await _navigator.NavigateViewModelAsync<SecondViewModel>(this, "./MainFrame/");
+            if (response != null)
+            {
+                var b = response.Success;
+            }
+        }
+    }
+
+    private INavigator _navigator;
+	private IRouteNotifier _routeNotifier;
 }

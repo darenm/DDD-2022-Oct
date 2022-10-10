@@ -11,15 +11,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid>
-        <muxc:NavigationView uen:Region.Attached="true">
-            <muxc:NavigationView.MenuItems>
-                <muxc:NavigationViewItem Content="First"
-										 uen:Region.Name="Products" />
-                <muxc:NavigationViewItem Content="Second"
-										 uen:Region.Name="Deals" />
-            </muxc:NavigationView.MenuItems>
-            <Frame uen:Region.Attached="true"/>
-        </muxc:NavigationView>
+    <Grid Padding="20" Background="Red">
+        <Frame Margin="20" uen:Region.Attached="true" uen:Region.Name="ShellFrame" Background="Green"/>
     </Grid>
 </UserControl>
